@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lister-Connecting To Publisher</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500"> 
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/mediaelementplayer.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/fl-bigmug-line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    
+  
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body>
+  
+  <div class="site-loader"></div>
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+    <div class="site-navbar mt-4">
+        <div class="container py-1">
+          <div class="row align-items-center">
+            
+            <div>
+              <nav class="site-navigation text-right text-md-right" role="navigation">
+
+                <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3 pl-4  "><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+                <ul class="site-menu js-clone-nav d-none d-lg-block">
+                  <li class="active">
+                    <a href="index.html" class="btn btn-warning">Beranda</a>
+                  </li>
+                  <li><a href="#">Daftar</a></li>
+                  <li><a href="#">Untuk Penerbit</a></li>
+                  <li><a href="#">Kontak Kami</a></li>
+                  <li><a href="#">Bantuan</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="site-blocks-cover overlay" style="background-image: url(images/tes-lister.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+              <img class="mb-3 main-logo" src="images/logo Lister background gelap.png" alt="main-logo" style="width: 100%;max-width: 506px;height: auto;">
+              <div class="input-group">
+                <div class="form-outline col-10 align-items-center" style="padding-left: 10%;">
+                  <input type="search" id="form1" class="form-control" placeholder="Temukan Jurnal Dengan Keyword" />
+                </div>
+                <button type="button" class="btn btn-warning" style="color: white;">Cari</button>
+              </div>
+            </div>
+                <!-- <div class="input-group">
+                  <div class="form-outline col-10" style="padding-left: 10%;">
+                    <input type="search" id="form1" class="form-control" placeholder="Temukan Jurnal Dengan Keyword" />
+                  </div>
+                  <button type="button" class="btn btn-primary">Cari</button>
+                </div> -->
+             <!-- <div class="container">
+
+                    <div class="row height d-flex justify-content-center">
+
+                      <div class="col-md-8 py-5>
+
+                        <div class="search">
+                          <i class="fa fa-search"></i>
+                          <input type="text" class="form-control" placeholder="Have a question? Ask Now" style="display: inline;">
+                          <span><button class="btn btn-primary" style="display: inline;">Search</button></span>
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+                </div> -->
+          </div>
+        </div>
+      </div>  
+
+
+    <div class="site-section site-section-sm pb-0">
+      <div class="container">
+        <div class="row">
+          <form class="form-search col-md-12" style="margin-top: -100px;">
+            <div class="row  align-items-end">
+              <div class="col-md-3">
+                <label for="list-types" style="color: white;">All Subject Areas</label>   
+                <div class="select-wrap">
+                  <span class="icon icon-arrow_drop_down"></span>
+                  <select name="list-types" id="list-types" class="form-control d-block rounded-0">
+                    <option value="">All Subject Areas</option>
+                    <option value="">Pertama</option>
+                    <option value="">Kedua</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="offer-types" style="color: white;">Subject Category</label>
+                <div class="select-wrap">
+                  <span class="icon icon-arrow_drop_down"></span>
+                  <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+                    <option value="">Subject Category</option>
+                    <option value="">Pertama</option>
+                    <option value="">Kedua</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="select-city"  style="color: white;">Category</label>
+                <div class="select-wrap">
+                  <span class="icon icon-arrow_drop_down"></span>
+                  <select name="select-city" id="select-city" class="form-control d-block rounded-0">
+                    <option value="">Category</option>
+                    <option value="">Pertama</option>
+                    <option value="">Kedua</option>
+                    <option value="">Ketiga</option>
+                    <option value="">Keempat</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="select-city"  style="color: white;">Sub-Category</label>
+                <div class="select-wrap">
+                  <span class="icon icon-arrow_drop_down"></span>
+                  <select name="select-city" id="select-city" class="form-control d-block rounded-0">
+                    <option value="">Sub-Category</option>
+                    <option value="">Pertama</option>
+                    <option value="">Kedua</option>
+                    <option value="">Ketiga</option>
+                    <option value="">Keempat</option>
+                  </select>
+                </div>
+              </div>
+          
+            </div>
+          </form>
+        </div>  
+
+        <div class="row" style="background-color: rgb(195, 194, 194);">
+          <div class="col-md-12">
+            <div class="view-options py-3 px-3 d-md-flex align-items-center">
+              <div class="mr-auto">
+              <form action="">
+                <input type="checkbox" name="" id="" class="mr-1"><h6 style="display: inline;" class="mr-4">National Journal</h6>
+                <input type="checkbox" name="" id="" class="mr-1"><h6 style="display: inline;">Internasional Journal</h6>
+              </form>
+              </div>
+              <div class="ml-auto d-flex align-items-center">
+                <div class="select-wrap">
+                  <span class="icon icon-arrow_drop_down"></span>
+                  <select class="form-control form-control-sm d-block rounded-0 mr-4">
+                    <option value="" disabled selected hidden>Select</option>
+                    <option value="">APC Jurnal</option>
+                    <option value="">Coverage</option>
+                    <option value="">Peringkat</option>
+                    <option value="">Bulan Terbit </option>
+                  </select>
+                </div>
+                <button type="submit" name="" id="" style="border: none;" class="btn btn-primary tombol-select">Apply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+
+    <div class="site-section site-section-sm bg-light">
+      <div class="container">
+      
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">ISSN</th>
+              <th scope="col">Nama Jurnal</th>
+              <th scope="col">Tipe</th>
+              <th scope="col">Peringkat</th>
+              <th scope="col">Coverage</th>
+              <th scope="col">APC</th>
+              <th scope="col">Pengelola</th>
+              <th scope="col">Website</th>
+              <th scope="col">Google Scholar</th>
+              <th scope="col">Template</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">20891180</th>
+              <td>Bali Medical journal</td>
+              <td>Nasional</td>
+              <td>S1</td>
+              <td>2025</td>
+              <td>1000 USD</td>
+              <td>FK Udayana</td>
+              <td><a href="#" class="btn btn-sm" style="background-color: darkblue !important; color: white;">Kunjungi</a></td>
+              <td><a href="#" class="btn btn-sm" style="background-color: darkblue !important; color: white;">Kunjungi</a></td>
+              <td><a href="#" class="btn btn-sm" style="background-color: darkblue !important; color: white;">Unduh</a></td>
+            </tr>
+            <tr>
+              <th scope="row">23562935</th>
+              <td>Journal Abdi Insani</td>
+              <td>Nasional</td>
+              <td>S4</td>
+              <td>2024</td>
+              <td>0 IDR</td>
+              <td>LPPM UNPAD</td>
+              <td><a href="#" class="btn btn-sm" style="background-color: darkblue !important; color: white;">Kunjungi</a></td>
+              <td><a href="#" class="btn btn-sm" style="background-color: darkblue !important; color: white;">Kunjungi</a></td>
+              <td><a href="#" class="btn btn-sm" style="background-color: darkblue !important; color: white;">Unduh</a></td>
+            </tr>
+            <tr>
+              <th scope="row">25799320</th>
+              <td>Journal Keperawatan Soedirman</td>
+              <td>Nasional</td>
+              <td>S2</td>
+              <td>2024</td>
+              <td>80 USD</td>
+              <td>Prodi Keperawatan</td>
+              <td><a href="#" class="btn btn-sm" style="background-color: darkblue !important; color: white;">Kunjungi</a></td>
+              <td><a href="#" class="btn btn-sm" style="background-color: darkblue !important; color: white;">Kunjungi</a></td>
+              <td><a href="#" class="btn btn-sm" style="background-color: darkblue !important; color: white;">Unduh</a></td>
+            </tr>
+            <tr>
+              <th scope="row">23548770</th>
+              <td>Jurnal Kefarmasian Indonesia</td>
+              <td>Nasional</td>
+              <td>S2</td>
+              <td>2026</td>
+              <td>0 IDR</td>
+              <td>BALITBANG</td>
+              <td><a href="#" class="btn btn-sm" style="background-color: darkblue !important; color: white;">Kunjungi</a></td>
+              <td><a href="#" class="btn btn-sm" style="background-color: darkblue !important; color: white;">Kunjungi</a></td>
+              <td><a href="#" class="btn btn-sm" style="background-color: darkblue !important; color: white;">Unduh</a></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <div class="site-section-title">
+              <h2>Kenapa Kami?</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="service text-center">
+              <span style="font-size: 50px;">14*</span>
+              <p>Jurnal Internasional Bereputasi</p>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="service text-center">
+              <span style="font-size: 50px;">57*</span>
+              <p>Jurnal Nasional Terakreditasi</p>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="service text-center">
+              <span style="font-size: 50px;">193*</span>
+              <p>Jurnal Nasional Terdaftar ISSN</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center">
+            <div class="site-section-title">
+             
+            </div>
+  
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <img class="gambar-diskusi" src="images/diskusi.jpg" alt="" style="width: 100%;max-width: 600px;height: auto;">
+          </div>
+          <div class="col-md-6 border border-dark";">
+            <h2 class="mt-4" style="color: black;text-align: center;">Kami Menyediakan <i>Database</i> Penerbit Jurnal Untuk Anda</h2> 
+            <p style="text-align: center;" class="pt-3 pb-3">Kami terhubung dengan penerbit jurnal terbaik untuk rencana publikasi anda.Hanya Jurnal Terindeks oleh Sinta,Scopus
+               dan Web of Science yang menjadi prioritas kami.Jurnal yang dicurigai (predatory,clone dan fake journals) telah dieksklusikan
+               dari data kami.
+            </p>
+            <a href="#" class="btn btn-success tombol-berminat" style="color: white;">Berminat</a>
+          </div>
+  
+     <div class="container mt-5 pr-5 pl-5 bg-dark pb-5" >
+       <div class="row">
+        <div class="col-md-7">
+          <h3 style="font-family: 'Secular One', sans-serif;color: green;margin-top: 50px;" class="penawaran-spesial">Penawaran Spesial</h3>
+          <h1 style="font-family: 'Secular One', sans-serif;color: white;">Untuk 50 Pendaftar Pertama!</h1>
+          <p style="color: white;">Lister.id merupakan laman database dan layanan jasa pencarian penerbit jurnal ilmiah.Laman ini masih dalam
+             pengembangan atau versi beta(statis),saran dan masukan anda sangat kami butuhkan sebagai bahan pertimbangan
+             untuk pengembangan lebih lanjut.Oleh karena itu,kami menawarkan fasilitas yang dapat digunakan,yaitu:
+          </p>
+          <p style="color: white;"><span style="background-color: green;color: white;border-radius: 20%;" class="py-1 px-2 mr-2">1</span>Menikmati fasilitas premium selama 6 bulan</p>
+          <p style="color: white;"><span style="background-color: green;color: white;border-radius: 20%;" class="py-1 px-2 mr-2">2</span>Mendapatkan informasi <i>Call for Paper</i>jurnal bereputasi</p>
+          <p style="color: white;"><span style="background-color: green;color: white;border-radius: 20%;" class="py-1 px-2 mr-2">3</span>Berkonsultasi dengan tim Lister.id terkait kendala Pengguna</p>
+        </div>
+        <div class="col-md-5">
+          <form class="mt-5">
+            <!-- Form Lister -->
+            <div class="mb-3" style="background-color: rgb(0, 216, 0);padding: 20px;font-family: 'Secular One', sans-serif;border-radius: 110px;">
+              <h1 style="color: white;text-align: center;">daftar sekarang!</h1>
+            </div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form5Example1" style="color: white;">Nama</label>
+              <input type="text" id="form5Example1" class="form-control form-control-sm" placeholder="Contoh:Rahmad Hidayat"/>
+            </div>
+          
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form5Example1" style="color: white;">Nama</label>
+              <input type="text" id="form5Example1" class="form-control form-control-sm" placeholder="Contoh:Rahmad Hidayat"/>
+            </div>
+          
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form5Example1" style="color: white;">Apakah anda merasa terbantu dengan Lister.id</label>
+              <select class="form-control form-control-sm d-block rounded-0 mr-4">
+                <option value="" disabled selected hidden>Select</option>
+                <option value="">iya</option>
+                <option value="">kurang</option>
+                <option value="">tidak</option>
+              </select>
+            </div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form5Example2" style="color:white">Email</label>
+              <input type="email" id="form5Example2" class="form-control form-control-sm" placeholder="Contoh:saya1@gmail.com"/>
+            </div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form5Example2" style="color:white">Email</label>
+              <input type="email" id="form5Example2" class="form-control form-control-sm" placeholder="Contoh:saya1@gmail.com"/>
+            </div>
+          
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-success btn-block mb-4" style="color: white;">Tertarik</button>
+          </form>
+      
+        </div>
+       </div>
+     </div>
+
+        </div>
+    </div>
+    </div>
+   </div>
+   
+    <footer class="site-footer">
+      <div class="container-footer">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="mb-5">
+              <h3 class="footer-heading mb-4">Tentang Website</h3>
+              <p style="color: white;">
+                Lister.id adalah laman database dan layanan jasa pencarian penerbit jurnal ilmiah yang saat ini masih dalam masa pengembangan
+                atau versi beta(statis).Kami sudah terhubung dengan penerbit jurnal terbaik untuk publikasi anda.Hanya jurnal terindeks dari 
+                Sinta,Scopus dan Web of Science yang jadi prioritas kami.jurnal yang dicurigai (Predatory,clone dan fake journals) telah dieksklusikan
+                dari data kami.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-1 mb-lg-0">
+            <div class="row mb-5">
+              <!-- <div class="col-md-12"> -->
+                <h3 class="footer-heading mb-4" style="visibility: hidden;">Navigasi</h3>
+              <!-- </div> -->
+              <div class="col-md">
+                <h3 class="footer-heading mb-4">Navigasi</h3>
+                <ul class="list-unstyled">
+                  <li><a href="#">Beranda</a></li>
+                  <li><a href="#">Daftar</a></li>
+                  <li><a href="#">Untuk Penerbit</a></li>
+                  <li><a href="#">Kontak Kami</a></li>
+                  <li><a href="#">Bantuan</a></li>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="col-lg-4 mb-1 mb-lg-0">
+            <h3 class="footer-heading mb-4">Follow Us</h3>
+                 
+                 <div>
+                  <a href="index.html"><img src="images/logo Lister background gelap.png" alt="" style="width: 100%;max-width: 300px;height: auto;" class="mb-4"></a>
+                 </div>
+
+                <div>
+                  <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                </div>
+
+              </div>
+         
+         
+
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <hr style="border: 1px;">
+            <p>
+            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | Lister Connecting To Publisher</a>
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+
+  </body>
+  </html>
+
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/mediaelement-and-player.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+    
+  
