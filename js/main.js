@@ -270,3 +270,52 @@ jQuery(document).ready(function($) {
 	
 
 });
+
+$('.page').css('height', $( window ).height());
+
+// scrollspy section
+(function($){
+ 
+  var sections = [];
+  var id = false;
+  var $navigasi = $('#navigasi-atas a');
+  
+  $navigasi.click(function(e){
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $($(this).attr('href')).offset().top
+},1000);
+    hash($(this).attr('href'));
+  });
+  
+  
+ 
+  $navigasi.each(function(){
+    sections.push($($(this).attr('href')));
+    
+  })
+  $(window).scroll(function(e){
+   
+    var scrollTop = $(this).scrollTop() + ($(window).height()/2);
+    
+    for (var i in sections) {
+      var section = sections[i];
+      if (scrollTop > section.offset().top){
+        var scrolled_id = section.attr('id');
+      }
+    }
+    if (scrolled_id !== id) {
+      id = scrolled_id;
+      $($navigasi).removeClass('current');
+      $('#navigasi-atas a[href="#' + id + '"]').addClass('current'); 
+    }
+  })
+})(jQuery);
+
+hash = function(h){
+  if (history.pushState){
+    history.pushState(null, null, h);
+  }else{
+    location.hash = h;
+  }
+}
