@@ -1045,6 +1045,22 @@ a {
     background-color: #aea419 !important;
   }
 
+  button.form-button{
+    background-color:rgb(0, 255, 0);
+  }
+
+  button.form-button:hover{
+    background-color: rgb(0, 148, 0) !important;
+  }
+
+  a.tombol-berminat{
+    background-color: rgb(0, 255, 0);
+  }
+
+  a.tombol-berminat:hover{
+    background-color: rgb(1, 168, 1);
+  }
+
   @media only screen and (max-width: 768px){
 
     .tombol-select{
