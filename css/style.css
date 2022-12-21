@@ -3,6 +3,10 @@
   display: none;
 } */
 
+body{
+  overflow-x: hidden;
+}
+
 
 
 body {
@@ -1036,6 +1040,10 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
   } */ 
+
+  a.Beranda:hover{
+    background-color: #aea419 !important;
+  }
 
   @media only screen and (max-width: 768px){
 
