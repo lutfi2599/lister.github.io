@@ -1,4 +1,10 @@
 /* Base */
+/* *::-webkit-scrollbar{
+  display: none;
+} */
+
+
+
 body {
   color: rgba(0, 0, 0, 0.6);
   font-weight: 400;
@@ -1010,7 +1016,7 @@ a {
     background: rgb(5, 0, 103);
     color: #fff;
     position: relative;
-    bottom: -120px;
+    bottom: -180px;
   }
 
   .container-footer{
