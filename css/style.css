@@ -346,7 +346,7 @@ a {
         -o-transition: 0.2s 0s;
         transition: 0.2s 0s; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown.arrow-top {
-          position: absolute; }
+          position: absolute; } 
           .site-navbar .site-navigation .site-menu .has-children .dropdown.arrow-top:before {
             bottom: 100%;
             left: 20%;
@@ -1079,3 +1079,19 @@ a {
       margin-top: 50px;
     }
   }
+
+  @media only screen and (min-width: 520px){
+    .logo-navbar{
+      visibility: hidden;
+    }
+    .logo-besar{
+      margin-left: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 500px){
+     .logo-besar{
+      visibility: hidden;
+     }
+  }
+  
