@@ -27,13 +27,14 @@ fetch(
     // console.info(dataHeader);
 
     $(document).ready(function () {
-      $("#example thead tr")
-        .clone(true)
-        .addClass("filters")
-        .appendTo("#example thead");
+      // $("#example thead tr")
+      //   .clone(true)
+      //   .addClass("filters")
+      //   .appendTo("#example thead");
 
       $("#example").DataTable({
         responsive: true,
+        dom: 'rtip',
         data: tabledata.slice(1).map((content) => {
           // console.log(content);
           const element1 = arrayMove(content, 0, 0);
@@ -46,75 +47,77 @@ fetch(
           const element8 = arrayMove(element7, 21, 8);
           return element8;
         }),
-        // columns: [
-        //   { title: "ISSN" },
-        //   { title: "Nama Jurnal" },
-        //   { title: "Peringkat" },
-        //   { title: "Coverage" },
-        //   { title: "APC" },
-        //   { title: "Pengelola" },
-        //   { title: "Website" },
-        //   { title: "Google Schoolar" },
-        //   { title: "Template" },
-        // ],
-        orderCellsTop: true,
-        fixedHeader: true,
-        initComplete: function () {
-          var api = this.api();
+        columns: [
+          { title: "ISSN" },
+          { title: "Nama Jurnal" },
+          { title: "Peringkat" },
+          { title: "Coverage" },
+          { title: "APC" },
+          { title: "Pengelola" },
+          { title: "Website" },
+          { title: "Google Schoolar" },
+          { title: "Template" },
+        ],
+        //     orderCellsTop: true,
+        //     fixedHeader: true,
+        //     initComplete: function () {
+        //       var api = this.api();
 
-          // For each column
-          api
-            .columns()
-            .eq(0)
-            .each(function (colIdx) {
-              // Set the header cell to contain the input element
-              var cell = $(".filters th").eq(
-                $(api.column(colIdx).header()).index()
-              );
-              var title = $(cell).text();
-              $(cell).html('<input type="text" placeholder="' + title + '" />');
+        //       // For each column
+        //       api
+        //         .columns()
+        //         .eq(0)
+        //         .each(function (colIdx) {
+        //           // Set the header cell to contain the input element
+        //           var cell = $(".filters th").eq(
+        //             $(api.column(colIdx).header()).index()
+        //           );
+        //           var title = $(cell).text();
+        //           $(cell).html('<input type="text" placeholder="' + title + '" />');
 
-              // On every keypress in this input
-              $(
-                "input",
-                $(".filters th").eq($(api.column(colIdx).header()).index())
-              )
-                .off("keyup change")
-                .on("change", function (e) {
-                  // Get the search value
-                  $(this).attr("title", $(this).val());
-                  var regexr = "({search})"; //$(this).parents('th').find('select').val();
+        //           // On every keypress in this input
+        //           $(
+        //             "input",
+        //             $(".filters th").eq($(api.column(colIdx).header()).index())
+        //           )
+        //             .off("keyup change")
+        //             .on("change", function (e) {
+        //               // Get the search value
+        //               $(this).attr("title", $(this).val());
+        //               var regexr = "({search})"; //$(this).parents('th').find('select').val();
 
-                  var cursorPosition = this.selectionStart;
-                  // Search the column for that value
-                  api
-                    .column(colIdx)
-                    .search(
-                      this.value != ""
-                        ? regexr.replace("{search}", "(((" + this.value + ")))")
-                        : "",
-                      this.value != "",
-                      this.value == ""
-                    )
-                    .draw();
-                })
-                .on("keyup", function (e) {
-                  e.stopPropagation();
+        //               var cursorPosition = this.selectionStart;
+        //               // Search the column for that value
+        //               api
+        //                 .column(colIdx)
+        //                 .search(
+        //                   this.value != ""
+        //                     ? regexr.replace("{search}", "(((" + this.value + ")))")
+        //                     : "",
+        //                   this.value != "",
+        //                   this.value == ""
+        //                 )
+        //                 .draw();
+        //             })
+        //             .on("keyup", function (e) {
+        //               e.stopPropagation();
 
-                  $(this).trigger("change");
-                  $(this)
-                    .focus()[0]
-                    .setSelectionRange(cursorPosition, cursorPosition);
-                });
-            });
-        },
+        //               $(this).trigger("change");
+        //               $(this)
+        //                 .focus()[0]
+        //                 .setSelectionRange(cursorPosition, cursorPosition);
+        //             });
+        //         });
+        //     },
+        //   });
+        // });
+        // console.log(dataHeader[0]);
+        // let tr = data.content.reduce((prev, cur) => {
+        //   let td = cur.map((e) => `<td>${e}</td>`);
+        //   return prev + `<tr>${td.join("")}</tr>`;
+        // }, "\r");
+        // document.querySelector("tbody").innerHTML = tr;
+        // document.querySelector("thead").innerHTML = trr;
       });
     });
-    // console.log(dataHeader[0]);
-    // let tr = data.content.reduce((prev, cur) => {
-    //   let td = cur.map((e) => `<td>${e}</td>`);
-    //   return prev + `<tr>${td.join("")}</tr>`;
-    // }, "\r");
-    // document.querySelector("tbody").innerHTML = tr;
-    // document.querySelector("thead").innerHTML = trr;
   });
