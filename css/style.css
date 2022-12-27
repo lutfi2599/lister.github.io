@@ -1041,6 +1041,10 @@ a {
     background-size: cover;
   } */ 
 
+  .keterangan-berminat{
+    margin-top: 150px;
+  }
+
   a.Beranda:hover{
     background-color: #aea419 !important;
   }
@@ -1092,6 +1096,14 @@ a {
   @media only screen and (max-width: 500px){
      .logo-besar{
       visibility: hidden;
+     }
+     
+     .search-jurnal{
+      padding-top: 220px;
+     }
+
+     .keterangan-berminat{
+      margin-top: 0;
      }
   }
   
