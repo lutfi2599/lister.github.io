@@ -116,7 +116,7 @@
               </div>
             </div> -->
             
-                <div class="row" style="margin-top: 30px;">
+                <div class="row" style="margin-top: 10px;">
                   <div class="col-md-4 col-lg-4">                   
                       <span style="font-size: 30px;color: white;">14*</span>
                       <p>Jurnal Internasional Bereputasi</p>                  
@@ -125,14 +125,14 @@
                       <span style="font-size: 30px;color: white;">57*</span>
                       <p>Jurnal Nasional Terakreditasi</p>
                   </div>
-                  <div class="col-md-4 col-lg-4" style="margin-bottom: 300px;">
+                  <div class="col-md-4 col-lg-4" style="margin-bottom: 340px;">
                       <span style="font-size: 30px;color: white;">193*</span>
                       <p>Jurnal Nasional Terdaftar ISSN</p>
                   </div>
                 </div>
             
             
-                  <div class="input-group search-jurnal" style="position: absolute;margin-top: 300px;">
+                  <div class="input-group search-jurnal" style="position: absolute;margin-top: 250px;">
                     <div class="form-outline col-10" style="padding-left: 13%;">
                       <input type="search" id="form1" class="form-control" placeholder="Temukan Jurnal Dengan Keyword" style="text-align:center;" />
                     </div>
@@ -162,7 +162,7 @@
       <div class="site-section site-section-sm pb-0">
         <div class="container">
           <div class="row">
-            <form class="form-search col-md-12" style="margin-top: -186px;">
+            <form class="form-search col-md-12 filter-lister" id="filter-lister">
               <div class="row  align-items-end">
                 <div class="col-md-3">
                   <label for="list-types" style="color: white;">All Subject Areas</label>   
@@ -489,6 +489,13 @@
 
   </body>
   </html>
+
+  <script>
+    function responsive(){
+      var filter = document.getElementById("filter-lister");
+      filter.classList.remove("filter-lister")
+    }
+  </script>
 
 
   <script src="js/jquery-3.3.1.min.js"></script>

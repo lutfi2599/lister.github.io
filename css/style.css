@@ -1065,6 +1065,10 @@ a {
     background-color: rgb(1, 168, 1);
   }
 
+  .filter-lister{
+    margin-top: -186px;
+  }
+
   @media only screen and (max-width: 768px){
 
     .tombol-select{
@@ -1104,6 +1108,10 @@ a {
 
      .keterangan-berminat{
       margin-top: 0;
+     }
+
+     .filter-lister{
+      margin-top: -100px
      }
   }
   
