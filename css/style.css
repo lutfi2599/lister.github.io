@@ -1042,7 +1042,8 @@ a {
   } */ 
 
   .keterangan-berminat{
-    margin-top: 150px;
+    margin-top: 75px;
+    height: 520px;
   }
 
   a.Beranda:hover{
@@ -1059,6 +1060,8 @@ a {
 
   a.tombol-berminat{
     background-color: rgb(0, 255, 0);
+    margin-left: 220px;
+    text-align: center;
   }
 
   a.tombol-berminat:hover{
@@ -1108,10 +1111,16 @@ a {
 
      .keterangan-berminat{
       margin-top: 0;
+      height: 590px;
      }
 
      .filter-lister{
       margin-top: -100px
+     }
+
+     a.tombol-berminat{
+      margin-left: 130px;
+      margin-top: 10px;
      }
   }
   
